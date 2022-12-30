@@ -13,12 +13,19 @@ package exercise1_step2;
 public class main {
 
 	public static void main(String[] args) {
-		Groceries milk = new Groceries();
-		Groceries sugar = new Groceries();
-		Groceries butter = new Groceries();
-		Groceries chocolate = new Groceries();
-		Groceries cakeList[] = {milk, sugar, butter, chocolate};
+		GroceriesList cakeList = new GroceriesList();
+		cakeList.addProduct(1.5, "lait", 2);
+		cakeList.addProduct(0.8, "sucre", 1);
+		cakeList.addProduct(2.5, "beurre", 2);
+		cakeList.addProduct(2.2, "chocolat", 5);
+		System.out.println(cakeList.totalPrice());
+		System.out.println(cakeList);
+		cakeList.removeProduct("Banane");
+		System.out.println(cakeList);
+	}
 		
+/* No need for these lines if we add the data into the parameters
+Groceries cakeList[] = {milk, sugar, butter, chocolate};
 		milk.price = 1.5;
 		sugar.price = 0.8;
 		butter.price = 2.5;
@@ -34,11 +41,16 @@ public class main {
 		butter.quantity = 2; //5€
 		chocolate.quantity = 5; //11€
 		
-		System.out.println(totalPrice(cakeList));
-		displayList(cakeList);
+		GroceriesList cakeList = new GroceriesList();
+        cakeList.addProduct(milk);
+         cakeList.addProduct(sugar);
+        cakeList.addProduct(butter);
+        cakeList.addProduct(chocolate);
+        System.out.println(cakeList.totalPrice());
+        System.out.println(cakeList);
 		}
 	
-	public static double totalPrice(Groceries[] cakeList) {
+		public static double totalPrice(Groceries[] cakeList) {
 		double price=0;
 		for (Groceries oneProduct : cakeList) {
 			price += oneProduct.price *oneProduct.quantity;
@@ -51,4 +63,4 @@ public class main {
 	        System.out.println(oneProduct.designation);
 	    }
 	}
-}
+*/

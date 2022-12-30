@@ -32,15 +32,12 @@ public class main {
 		chocolate.designation = "chocolat";
 		
 		//For Loop to get the total price
-		for (int i = 0; i < cakeList.length; i++) {
-			double totalPrice=0;
-			while (i < cakeList.length) {
+		double totalPrice=0;
+		for (int i = 0; i < cakeList.length; i++) {	
 				totalPrice += cakeList[i].price;
-				i++;
-			}
-			//Display the total price
-			System.out.println(totalPrice);
 		}
+		//Display the total price
+		System.out.println(totalPrice);
 		
 //correction for totalPrice, this line is necessary when creating another function outside the main one
 		//System.out.println(totalPrice(cakeList));
@@ -52,10 +49,7 @@ public class main {
 		//Display all objects in the list.
 		for (int i = 0; i < cakeList.length; i++) {
 			String ingredients = "";
-			while (i < cakeList.length) {
-				ingredients += cakeList[i].designation+" ";
-				i++;
-			}
+				ingredients += cakeList[i].designation;
 			System.out.println(ingredients);
 		}
 	}
